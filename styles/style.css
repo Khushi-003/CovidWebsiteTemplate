@@ -14,9 +14,6 @@
   padding: 1rem;
   text-decoration: none;
 }
-.navbar .icon {
-  display: none;
-}
 
 .navbar a {
   float: left;
@@ -55,6 +52,7 @@
 @media screen and (max-width: 600px) {
   .navbar.responsive {
     position: relative;
+    z-index: 2;
   }
   .navbar.responsive .icon {
     position: absolute;
