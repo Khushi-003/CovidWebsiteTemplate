@@ -4,19 +4,156 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="styles/style.css" />
     <script src="scripts/script.js"></script>
     <title>COVID</title>
   </head>
   <body>
     <div class="main">
-      <div class="top">
-        <div class="string">
-          <br />
-          <div class="list"></div>
-        </div>
-        <marquee behavior="slide" direction="left">COVID 19</marquee>
+      <div class="header">
+        <img src="assets/logo.png" alt="logo" class="logo" />
       </div>
+      <div class="navbar" id="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Browse</a>
+        <a href="#">Patients</a>
+        <a href="#">Resources</a>
+        <a href="#">News</a>
+        <a href="#">Emergencies</a>
+        <a href="#">Stories</a>
+        <a href="#">Help</a>
+        <a href="#">SignIn/LogIn</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <hr />
+      <div class="heading">
+        <img src="assets/corona.jpg" alt="corona" />
+        <h3 class="text1">COVID 19 Virus</h3>
+      </div>
+      <div class="content">
+        <div class="about">
+          <h3>ABOUT</h3>
+          <p>
+            Coronavirus disease (COVID-19) is an infectious disease caused by
+            the SARS-CoV-2 virus.
+          </p>
+          <p>
+            Coronaviruses (CoV) are a large family of viruses that cause illness
+            ranging from the common cold to more severe diseases. A novel
+            coronavirus (nCoV) is a new strain that has not been previously
+            identified in humans.
+          </p>
+        </div>
+        <div class="cause">
+          <h3>GRAPH</h3>
+          <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        </div>
+        <div class="symptoms">
+          <h3>SYMPTOMS</h3>
+          <p>
+            Most common symptoms:
+            <ul>
+                <li>Fever</li>
+                <li>Cough</li>
+                <li>Tiredness</li>
+                <li>Loss of taste or smell</li>
+            </ul>
+          </p>
+          <p>
+            Less common symptoms:
+            <ul>
+                <li>sore throat</li>
+                <li>headache</li>
+                <li>aches and pains</li>
+            </ul>
+          </p>
+        </div>
+        <div class="about1">
+            <h3>GRAPH</h3>
+            <div id="myPlot" style="width:100%;max-width:1000px"></div>
+          </div>
+          <div class="cause1">
+            <h3>CAUSES</h3>
+            <p>
+              Infection with severe acute respiratory syndrome coronavirus 2, or
+              SARS-CoV-2, causes coronavirus disease 2019 (COVID-19).
+            </p>
+            <p>
+              The virus that causes COVID-19 spreads easily among people. Data has
+              shown that the COVID-19 virus spreads mainly from person to person
+              among those in close contact (within about 6 feet, or 2 meters). The
+              virus spreads by respiratory droplets released when someone with the
+              virus coughs, sneezes, breathes, sings or talks. These droplets can
+              be inhaled or land in the mouth, nose or eyes of a person nearby.
+            </p>
+          </div>
+          <div class="symptoms1">
+            <h3>SYMPTOMS</h3>
+            <p>
+              Most common symptoms:
+              <ul>
+                  <li>Fever</li>
+                  <li>Cough</li>
+                  <li>Tiredness</li>
+                  <li>Loss of taste or smell</li>
+              </ul>
+            </p>
+            <p>
+              Less common symptoms:
+              <ul>
+                  <li>sore throat</li>
+                  <li>headache</li>
+                  <li>aches and pains</li>
+              </ul>
+            </p>
+          </div>
+      </div>
+      
     </div>
   </body>
+  <script>
+      var xArray = ["Italy", "France", "Spain", "USA", "Argentina"];
+var yArray = [55, 49, 44, 24, 15];
+
+var layout = { title: "World Wide Wine Production" };
+
+var data = [{ labels: xArray, values: yArray, hole: 0.4, type: "pie" }];
+
+Plotly.newPlot("myPlot", data, layout);
+
+
+var xValues = [100,200,300,400,500,600,700,800,900,1000];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{ 
+      data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+      borderColor: "red",
+      fill: false
+    }, { 
+      data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+      borderColor: "green",
+      fill: false
+    }, { 
+      data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+      borderColor: "blue",
+      fill: false
+    }]
+  },
+  options: {
+    legend: {display: false}
+  }
+});
+  </script>
 </html>
