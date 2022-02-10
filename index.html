@@ -8,6 +8,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="styles/style.css" />
@@ -18,9 +25,16 @@
     <div class="main">
       <div class="header">
         <img src="assets/logo.png" alt="logo" class="logo" />
+        <div class="help">
+        <b>HELPLINE NUMBER: <br> <a href="" style="color: blue; text-decoration: underline;">1800-111-657</a></b>
+        </div>&#160;&#160;&#160;&#160;
+        <div class="mail">
+        <b>Email: <p style="color: red; text-decoration: underline;">covid19help.ugc@gov.in</p></b>
+
+        </div>
       </div>
       <div class="navbar" id="navbar">
-        <a href="#">Home</a>
+        <a href="#" style="background-color: bisque; color: black;">Home</a>
         <a href="#">About</a>
         <a href="#">Browse</a>
         <a href="#">Patients</a>
@@ -30,6 +44,7 @@
         <a href="#">Stories</a>
         <a href="#">Help</a>
         <a href="#">SignIn/LogIn</a>
+        <input type="text" placeholder="Search..">
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
@@ -41,7 +56,8 @@
       </div>
       <div class="content">
         <div class="about">
-          <h3>ABOUT</h3>
+          <h3 style="text-decoration: underline; color: red;">ABOUT</h3><br>
+          <img src="assets/covid.jpg" alt="covid">
           <p>
             Coronavirus disease (COVID-19) is an infectious disease caused by
             the SARS-CoV-2 virus.
@@ -54,39 +70,47 @@
           </p>
         </div>
         <div class="cause">
-          <h3>GRAPH</h3>
-          <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+          <h3 style="text-decoration: underline; color: blue;">GRAPH</h3><br>
+          <canvas id="myChart" style="width:100%;max-width:600px;"></canvas><br>
         </div>
         <div class="symptoms">
-          <h3>SYMPTOMS</h3>
-          <p>
-            Most common symptoms:
+          <h3 style="text-decoration: underline; color: green;">SYMPTOMS</h3><br>
+          
+            <img src="assets/cough.jpg" alt="cough">
             <ul>
                 <li>Fever</li>
                 <li>Cough</li>
                 <li>Tiredness</li>
                 <li>Loss of taste or smell</li>
             </ul>
-          </p>
-          <p>
-            Less common symptoms:
+          
+          
+            
             <ul>
                 <li>sore throat</li>
                 <li>headache</li>
                 <li>aches and pains</li>
             </ul>
-          </p>
-        </div>
+          
+        </div><hr>
         <div class="about1">
-            <h3>GRAPH</h3>
-            <div id="myPlot" style="width:100%;max-width:1000px"></div>
+            <h3 style="text-decoration: underline; color: grey;">PREVENTION</h3><br>
+            <img src="assets/sanimask.jfif" alt="">
+            <h5>Stopping the spread starts with you</h5>
+            <ul>
+              <li>Wear a mask.</li>
+              <li>Clean your hands.</li>
+              <li>Maintain safe distance.</li>
+              <li>Get vaccinated.</li>
+            </ul>
           </div>
           <div class="cause1">
-            <h3>CAUSES</h3>
+            <h3 style="text-decoration: underline; color: tomato;">CAUSES</h3><br>
             <p>
               Infection with severe acute respiratory syndrome coronavirus 2, or
               SARS-CoV-2, causes coronavirus disease 2019 (COVID-19).
             </p>
+            <p>COVID-19 transmits when people breathe in air contaminated by droplets and small airborne particles. The risk of breathing these in is highest when people are in close proximity, but they can be inhaled over longer distances, particularly indoors.</p>
             <p>
               The virus that causes COVID-19 spreads easily among people. Data has
               shown that the COVID-19 virus spreads mainly from person to person
@@ -97,7 +121,7 @@
             </p>
           </div>
           <div class="symptoms1">
-            <h3>SYMPTOMS</h3>
+            <h3 style="text-decoration: underline; color: rosybrown;">SYMPTOMS</h3><br>
             <p>
               Most common symptoms:
               <ul>
@@ -117,18 +141,72 @@
             </p>
           </div>
       </div>
+
+
+      <hr>
+
+
+      <div class="footer">
+        <footer>
+          <div class="footer-gray">
+            <div class="footer-custom">
+              <div class="footer-lists">
+                <div class="footer-list-wrap">
+                  <h6 class="ftr-hdr">HELPLINE NUMBER:</h6>
+                  <ul class="ftr-links-sub">
+                    <li>1800-111-657</li>
+                  </ul>
+                  <h6 class="ftr-hdr">International</h6>
+                  <ul class="ftr-links-sub">
+                    <li><a href="https://www.afro.who.int/" rel="nofollow">Africa</a></li>
+                    <li><a href="https://www.paho.org/en" rel="nofollow">America</a></li>
+                  </ul>
+                </div>
+                <!--/.footer-list-wrap-->
+                <div class="footer-list-wrap">
+                  <h6 class="ftr-hdr">Service</h6>
+                  <ul class="ftr-links-sub">
+                    <li><a href="https://covid19.who.int/" rel="nofollow">Contact Us</a></li>
+                    
+                  </ul>
+                </div>
+                <div class="footer-list-wrap">
+                  <h6 class="ftr-hdr">About Covid</h6>
+                  <ul class="ftr-links-sub">
+                    <li><a href="https://www.worldometers.info/coronavirus/" rel="nofollow">  Live Case Study</a></li>
+                    <li><a href="https://www.cowin.gov.in/" rel="nofollow">Indian Covid Website</a></li>
+                    <li><a href="https://www.mohfw.gov.in/" rel="nofollow">Ministry Of Health & family Welfare</a></li>
+                    <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html" rel="nofollow">More About Covid</a></li>
+                    <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/people-with-medical-conditions.html" rel="nofollow">Services For Emergency Conditions</a></li>
+                  </ul>
+                </div>
+                <!--/.footer-list-wrap-->
+                
+                <!--/.footer-list-wrap-->
+              </div>
+              <!--/.footer-lists-->
+             
+              <!--/.footer-email-->
+             
+              <!--/.footer-social-->
+              <div class="footer-legal">
+                <p>&copy; Art.com Inc. All Rights Reserved. | <a href="/help/privacy-policy.html" rel="nofollow">Privacy Policy</a> | <a href="/help/terms-of-use.html" rel="nofollow">Terms of Use</a> | <a href="/help/terms-of-sale.html" rel="nofollow">Terms of Sale</a></p>
+                <p>Art.com, You+Art, and Photos [to] Art are trademarks or registered trademarks of Art.com Inc.</p>
+                <p>Various aspects of this website are covered by issued US patent No. 7,973,796 and other pending patent applications.</p>
+              </div>
+              <!--/.footer-legal-->
+              <!--/.footer-payment-->
+            </div>
+            <!--/.footer-custom-->
+          </div>
+          <!--/.footer-gray-->
+        </footer>
+      </div>
+      
       
     </div>
   </body>
   <script>
-      var xArray = ["Italy", "France", "Spain", "USA", "Argentina"];
-var yArray = [55, 49, 44, 24, 15];
-
-var layout = { title: "World Wide Wine Production" };
-
-var data = [{ labels: xArray, values: yArray, hole: 0.4, type: "pie" }];
-
-Plotly.newPlot("myPlot", data, layout);
 
 
 var xValues = [100,200,300,400,500,600,700,800,900,1000];
@@ -156,4 +234,14 @@ new Chart("myChart", {
   }
 });
   </script>
+  <!-- <script>
+     var xArray = ["Italy", "France", "Spain", "USA", "Argentina"];
+var yArray = [55, 49, 44, 24, 15];
+
+var layout = { title: "World Wide Wine Production" };
+
+var data = [{ labels: xArray, values: yArray, hole: 0.4, type: "pie" }];
+
+Plotly.newPlot("myPlot", data, layout);
+  </script> -->
 </html>
